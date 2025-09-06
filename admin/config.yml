@@ -1,8 +1,6 @@
 backend:
-  name: github
-  repo: "judi-co/animzonquotes"   # Remplace par ton repo
-  branch: master                  # Branche principale
-  token: "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"  # Ton token
+  name: git-gateway
+  branch: master
 
 media_folder: "images"
 public_folder: "/images"
@@ -14,7 +12,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Anime", name: "anime", widget: "string" }
-      - { label: "Personnage", name: "character", widget: "string" }
-      - { label: "Citation", name: "quote", widget: "text" }
-
+      - { label: "Anime", name: "anime", widget: "string", required: true }
+      - { label: "Personnage", name: "character", widget: "string", required: true }
+      - { label: "Citation", name: "quote", widget: "text", required: true }
+      - { label: "Image (optionnelle)", name: "image", widget: "image", required: false }
