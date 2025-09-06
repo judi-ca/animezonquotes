@@ -1,17 +1,17 @@
 backend:
   name: git-gateway
-  branch: master  # ou main selon ton dépôt
+  branch: master
 
-media_folder: "assets/images"
-public_folder: "/assets/images"
+media_folder: "static/uploads"
+public_folder: "/uploads"
 
 collections:
-  - name: "quotes"
+  - name: "citations"
     label: "Citations"
-    folder: "content/quotes"
+    folder: "content/citations"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Citation", name: "text", widget: "string" }
-      - { label: "Auteur", name: "author", widget: "string" }
-      - { label: "Animation URL", name: "animation", widget: "string" }
+      - { name: "author", label: "Auteur", widget: "string" }
+      - { name: "quote", label: "Citation", widget: "text" }
+      - { name: "image", label: "Image", widget: "image" }
