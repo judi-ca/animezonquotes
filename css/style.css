@@ -1,0 +1,402 @@
+/* Variables globales */
+:root {
+  --primary-color: #e63946;   /* accent rouge */
+  --secondary-color: #1e1e1e; /* gris foncé */
+  --background-color: #121212; /* fond sombre */
+  --text-color: #f5f5f5;      /* texte principal */
+  --heading-font: 'Bebas Neue', sans-serif;
+  --body-font: 'Poppins', sans-serif;
+}
+
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Titres */
+h1, h2, h3 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  letter-spacing: 2px;
+}
+
+/* Liens */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header + Navigation */
+header {
+  background: var(--secondary-color);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  margin: 0 15px;
+  font-weight: 600;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Boutons */
+button {
+  background: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #c92c3a;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--secondary-color);
+  margin-top: 40px;
+}
+/* ============================================ */
+/* ============ STYLISATION PARALLAX ========== */
+/* ============================================ */
+
+body{
+    height: 300vh ;
+    max-width: 100%;
+}
+
+.header{
+    text-align: center;
+    height: 400px;
+    width:100% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/animesImg/parallaxe.jfif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+ h2{
+    text-transform: uppercase;
+    font-size: 45px;
+}
+
+.content{
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    background: transparent;
+}
+
+header p{
+    color: white;
+}
+
+@media (max-width:700px) {
+    header p{
+        text-align: center;
+    }
+    .header{
+      display: none;
+    }
+}
+
+   /* ===================================================================== --> */
+    /*  ================== Stylisation de la barre de recherche =========== --> */
+    /*  ======================================================================= --> */
+
+    .search-bar{
+        width: 100%;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .search-bar input{
+        width: 80%;
+        max-width: 500px;
+        padding:10px ;
+        font-size: 16px;
+        border-radius: 5px;
+        color: white;
+        border: 1px solid #ccc;
+        background-color: #121212;
+    }
+
+/* =============================================================== */
+/* ==============   stylisation de la partie quotes  ============ */
+/* ============================================================== */
+
+.quotes-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+    padding: 10px;
+  display: flex;                /* affiche le contenu en ligne */         /* horizontal : texte à gauche, image à droite */
+  align-items: center;
+  width: 400px;                 /* largeur fixe pour les cards */
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  overflow: hidden;             /* empêche le débordement */
+  background-color: #1e1e1e;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  /* box-shadow: 0 2px 10px #c92c3a; */
+}
+
+/* Texte à gauche */
+.text-left {
+  flex: 1;                      /* prend tout l'espace restant */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Citation et auteur */
+.citation {
+  font-style: italic;
+  margin-bottom: 10px;
+  max-height: 100%;
+}
+
+.auteur {
+  font-weight: 700;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Image à droite */
+.personnages {
+  width: 150px;                 /* largeur fixe de l'image */
+  height: 150px;  
+  border-radius: 15px;              /* hauteur fixe de l'image */
+  object-fit: contain;          /* garde la proportion de l'image */
+  margin: 5px;
+  display: block;
+  margin-left: 10px;
+}
+
+.personnages img{
+    border-radius: 15px;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 700px) {
+    .quotes-card{
+        max-width: 100%;
+    }
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 150px;
+  }
+
+
+  .personnages {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .text-left {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .game-zone h2{
+    font-size: 25px;
+    }
+
+
+
+}
+
+
+
+
+     /* ===================================================================== --> */
+    /*  ================== PROPOSITION DE CITATIONS    ======================= --> */
+    /*  ======================================================================= --> */
+
+    .propos{
+        margin-top: 75px;
+        margin-bottom: 120px;
+    }
+
+    h2{
+        margin: 10px auto;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    form{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    form input{
+        display: block;
+        margin: 10px auto;
+        height: 35px;
+        background-color: #1e1e1e;
+        border: 1px solid #121212;
+        padding: 10px;
+        border-radius: 15px;
+        width: 350px;
+        transition: 0.3s ease;
+        color: white;
+    }
+
+    form input:hover{
+        border: 1px solid #c92c3a;
+    }
+
+    .btn{
+        width: 300px;
+        max-width: 100%;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .aucune-trouvee {
+    padding: 20px;
+    margin-top: -45px;
+    margin-bottom: 15%;
+    background:#121212;
+    color: #c92c3a;
+    border: 2px solid #c92c3a;
+    border-radius: 10px;
+    text-align: center;      /* centre le texte */
+    font-weight: bold;
+    font-size: 1.1em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.aucune-trouvee p {
+    margin: 0;
+}
+
+ /* -===================================================================== 
+-============================== stule A propos ======================= 
+ -===================================================================== */
+
+ .a-propos{
+    margin: 20px;
+    margin-top: 175px;
+    text-align: center;
+    text-justify:inter-word;
+    padding: 10px;
+ }
+
+ .a-propos h3{
+    font-size: 40px;
+    color: white;
+    margin-bottom: 10px;
+ }
+  /* -===================================================================== 
+-============================== footer ======================= 
+ -===================================================================== */
+
+ footer{
+    margin: 0;
+ }
+ p{
+    color: #c92c3a;
+ }
+
+ h4{
+    margin-bottom: 10px;
+ }
+
+ .dev{
+    color: #c92c3a;
+    margin: 0 15px;
+    padding: 15px;
+    /* background-color: white; */
+ }
+
+  /* ===================================================================== --> */
+    /*  ==================         GAME             ======================= --> */
+    /*  ======================================================================= --> */
+
+
+.game-zone{
+  margin: 0;
+  background-color: #1e1e1e;
+  padding: 30px;
+  overflow: hidden;
+}
+
+.game{
+  max-width: 100%;
+  display: block;
+  flex-direction: column;
+  margin: 10px auto;
+  width: 250px;
+  background-blend-mode: rgb(50, 10, 10);
+  border: 2px solid #e63946;
+  padding: 20px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.game:hover{
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 12px #51090f;
+}
+
+.game h3{
+  text-align: center;
+}
+
+.game p{
+  border: 1px solid #c92c3a;
+  padding: 7px;
+  border-radius: 7px;
+  margin-top:7px ;
+}
