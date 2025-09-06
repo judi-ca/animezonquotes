@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: "ton-username/ton-repo"   # Remplace par ton repo
+  repo: "judi-co/animzonquotes"   # Remplace par ton repo
   branch: master                  # Branche principale
   token: "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"  # Ton token
 
@@ -17,3 +17,4 @@ collections:
       - { label: "Anime", name: "anime", widget: "string" }
       - { label: "Personnage", name: "character", widget: "string" }
       - { label: "Citation", name: "quote", widget: "text" }
+
